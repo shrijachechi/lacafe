@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+   
+      a{
+    text-decoration: none;  
+    color:rgb(3, 3, 92); }
+
+    ul{
+    list-style: none;
+    display: flex;
+    width: 500px;
+     justify-content:space-around;
+}
+nav{
+    min-height: 45px;
+    display: flex;
+    background-color:cyan;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-evenly;
+    align-items:stretch;
+}
+@media screen and (max-width:600px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+          }
+}
+        .flipCardContainer{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flip-card {
+    background-color:transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  #avtarImg{
+    width: 100%;
+    height: 300px;
+}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+#fcb1{
+    background-color: #ec790e;
+    color: white;
+    transform: rotateY(180deg);
+}
+#fcb2{
+    background-color: #3b9e3b;
+    color: white;
+    transform: rotateY(180deg);
+}
+#fcb3{
+    background: rgb(255, 247, 216);
+    color: black;
+    transform: rotateY(180deg);
+}
+#fcb4{
+    background-color: #3b9e3b;
+    color: rgb(196, 173, 173);
+    transform: rotateY(180deg);
+}
+.carasoul-styling img{
+    height: 600px;
+    
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    background: rgb(105, 105, 103);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+  }
+
+
+    </style>
+</head>
+
+
+<body>
+
+  <nav id="navbar">
+    <a href="#">Home</a>
+    <ul>
+        <li><a href="#bgContainer">Carousel</a></li>
+      <li><a href="#flipCardContainer">Flip-Cards</a></li>
+      <li><a href="#footerContainer">Footer</a></li>
+    </ul>
+    <a href="#">SignUp</a>
+</nav>
+    <div class="carasoul-styling">
+    <div class="bgContainer" id="bgContainer">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F150929101049-black-coffee-stock.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1AD2/production/_98866860_gettyimages-486020904.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    </div>
+
+    <section>
+      <div class="flipCardContainer" id="flipCardContainer">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://cdn.aarp.net/content/dam/aarp/health/drugs_supplements/2013-10/1140-cup-coffee-too-much-caffeine-bad.imgcache.rev3a140c466f1f8e051acc2b80e4c1b589.jpg" alt="Avatar" id="avtarImg">
+            </div>
+            <div class="flip-card-back" id="fcb1">
+              <h1>coffee</h1> 
+              <p>coffee should be dark hot and bitter.</p> 
+              
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://i.ndtvimg.com/i/2016-11/coffee_620x350_61480315588.jpg" alt="Avatar" id="avtarImg">
+            </div>
+            <div class="flip-card-back"  id="fcb2">
+              <h1>Espresso</h1> 
+              <p>no milk</p> 
+              
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://i.ytimg.com/vi/kqk83QzVun0/maxresdefault.jpg" alt="Avatar" id="avtarImg">
+            </div>
+            <div class="flip-card-back"  id="fcb3">
+              <h1>capuccino</h1> 
+              <p> </p> 
+            
+            </div>
+          </div>
+        </div>
+  
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/beveragedaily.com/news/r-d/aussie-barista-helps-scientists-to-brew-the-perfect-espresso/10795433-1-eng-GB/Aussie-barista-helps-scientists-to-brew-the-perfect-espresso_wrbm_large.jpg" alt="Avatar" id="avtarImg">
+            </div>
+            <div class="flip-card-back"  id="fcb4">
+              <h1>coffee</h1> 
+              <p> bitter </p> 
+              
+            </div>
+          </div>
+        </div>
+        </section>
+        <div class="footerContainer" id="footerContainer">
+          <footer>
+              <p>La Cafe<br>
+                  <span>&copy;2021 Project Based On CSS </span>
+                  <p>Made by Shrija</p>
+              <a href="#" style="text-decoration: underline; color: #000;"></a></p>
+            </footer>
+  
+      </div>
+      
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
